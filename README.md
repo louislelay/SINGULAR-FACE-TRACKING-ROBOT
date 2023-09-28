@@ -1,4 +1,4 @@
-ROBOT AMOUREUX
+SINGULAR FACE TRACKING ROBOT
 
 Le but était de créer un robot qui cherche puis suit le seul visge qu'il connaît. Et ce peu importe s'il y a d'autres personne autour.
 
