@@ -35,9 +35,8 @@ The Singular Face Tracking Robot project aimed to create a robot that identifies
 ## Demonstration Video
 To see the Singular Face Tracking Robot in action, check out our demonstration video on YouTube:
 
-[![Watch the video](https://img.youtube.com/vi/VA9WC24NqdE/0.jpg)](https://www.youtube.com/watch?v=VA9WC24NqdE&ab_channel=LouisLeLay)
+[![Watch the video](https://img.youtube.com/vi/VA9WC24NqdE/0.jpg)](https://www.youtube.com/watch?v=VA9WC24NqdE)
 
-*Note: Replace "XXXXXX" with the actual video ID.*
 
 ## Authors
 - Pierre&Louis
