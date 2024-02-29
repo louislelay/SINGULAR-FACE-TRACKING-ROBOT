@@ -1,11 +1,43 @@
-SINGULAR FACE TRACKING ROBOT
+# SINGULAR FACE TRACKING ROBOT
 
-Le but était de créer un robot qui cherche puis suit le seul visge qu'il connaît. Et ce peu importe s'il y a d'autres personne autour.
+## Overview
+The Singular Face Tracking Robot project aimed to create a robot that identifies and follows a specific face it recognizes, regardless of the presence of other people around. This innovative project consists of two main components: a training module to train a model using a video of the recognized person, and a tracking module that utilizes the trained model to identify and follow the designated face with the help of two motors.
 
-Le projet est constitué de deux codes, un premier servant à entraîner un modèle sur la base d'une vidéo et le deuxième se servant du fichier .yml créé pour reconnaître grâce à la caméra le visage recherché puis le suivre à l'aide de deux moteurs.
+## Requirements
+- **Programming Language**: The project is developed in C++.
+- **Libraries and Tools**:
+  - OpenCV 4: For image processing and face recognition functionalities.
+  - Arduino Software (IDE): To upload the necessary code to the Arduino Uno board.
+  
+## Installation and Setup
+1. **OpenCV 4 Installation**: Ensure OpenCV 4 is installed on your system for the project to function correctly.
+2. **Arduino Software Setup**:
+   - Download and install the Arduino IDE from the official website.
+   - Connect your Arduino Uno board to your computer and select the corresponding port in the Arduino IDE.
+   - Upload the "Servo_Parse_int.ino" program to your Arduino Uno board to control the motors.
 
-Ces deux programmes sont codés en C++, ils necessitent l'installation d'opencv 4 ainsi que l'installation du logiciel arduino. En effet, il faudra d'abord sélectionner sur celui-ci le port correspondant et upload sur la carte Arduino Uno le programme "Servo_Parse_int.ino". Une fois ceci fait, on s'attaquera à la création du modèle.
+## Training the Model
+1. **Preparing the Training Video**:
+   - In the "training" folder, place a 15-second video of the person to be recognized and name it "video.mp4".
+   - Modify line 27 of the "training.cpp" file to reflect the exact duration of the video.
+2. **Generating the Model**:
+   - In the terminal, navigate to the "training" folder and execute the makefile to compile the program.
+   - Run the compiled program to generate a model named "modele.yml" and place this file in the "prog" directory.
 
-Dans le dossier "training", il faudra placer une vidéo de la personne à reconnaitre d'environ 15 sec et la nommer "video.mp4". Ligne 27 du fichier "training.cpp", il faudra y noter la durée précise. Dans le terminal du dossier, on lance le makefile puis le programme. Un fichier nommé "modele.yml" vient d'être créé. Ce fichier il faut le placer dans le dossier "prog". Dans le fichier "prog.cpp", ligne 138 il faut remplacer le chiffre pour bien être sur le bon port USB pour la caméra et pour information la webcam correspond au 0. Ensuite, ligne 86 on écrira le port trouvé precedemment sur le logiciel arduino. Une fois ceci fait, il ne reste plus qu'a lancer le make et le programme pour que le robot se mette en marche.
+## Running the Tracking Module
+1. **Setting Up the Camera and Arduino Port**:
+   - In the "prog.cpp" file, modify line 138 to set the correct USB port for the camera (with "0" typically representing the webcam).
+   - On line 86, specify the previously identified Arduino port.
+2. **Launching the Program**:
+   - Compile and run the program by executing the makefile in the "prog" directory.
+   - Once started, the robot will begin to identify and follow the recognized face using the camera and motors.
 
-Pierre&Louis
+## Demonstration Video
+To see the Singular Face Tracking Robot in action, check out our demonstration video on YouTube:
+
+[![Watch the video](https://img.youtube.com/vi/VA9WC24NqdE/0.jpg)](https://www.youtube.com/watch?v=VA9WC24NqdE&ab_channel=LouisLeLay)
+
+*Note: Replace "XXXXXX" with the actual video ID.*
+
+## Authors
+- Pierre&Louis
